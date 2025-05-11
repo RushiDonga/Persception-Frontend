@@ -11,9 +11,9 @@ export default function NewHero() {
     if (!prompt) {
       return;
     }
+
     if (!userAuth) {
-      sessionStorage.setItem("pendingPrompt", JSON.stringify({ prompt }));
-      navigate("/signin");
+      navigate("/freeDashboard", { state: { prompt } });
     } else {
       navigate("/dashboard", { state: { prompt } });
     }
@@ -38,16 +38,16 @@ export default function NewHero() {
 
           <div className="space-y-4 transition-transform duration-700 delay-200">
             <input
-            placeholder="Magical forest with glowing mushrooms"
+              placeholder="Magical forest with glowing mushrooms"
               type="text"
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               className="w-full p-4 rounded-xl bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-primary outline-none"
               onKeyDown={(e) => {
-                    if(e.key === 'Enter'){
-                      handleGenerateButton();
-                    }
-                  }}
+                if (e.key === "Enter") {
+                  handleGenerateButton();
+                }
+              }}
             />
             <button
               onClick={handleGenerateButton}

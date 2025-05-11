@@ -31,6 +31,14 @@ export default function FreeDashboard() {
 
   // Get the Prompt from the Home Page
   useEffect(() => {
+    console.log(location.state);
+    if (location.state) {
+      setPrompt(() => location.state.prompt);
+    }
+  }, [location.state]);
+
+  // Get the Prompt from the Home Page
+  useEffect(() => {
     if (location.state) {
       setPrompt(() => location.state.prompt);
     }
@@ -68,24 +76,23 @@ export default function FreeDashboard() {
     const response = await freeAccessAPI(payload, setError);
 
     if (response) {
-    setGeneratedImage((prev) => ({
+      setGeneratedImage((prev) => ({
         ...prev,
-        image:response.data.data[0].base64,
+        image: response.data.data[0].base64,
         credits: response.data.credits,
-        isLoading: false
-    }));
+        isLoading: false,
+      }));
     }
   };
 
   return (
     <div className="min-h-screen bg-gray-900 text-white font-sans">
-
       {error && (
         <ModalDashboard
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           buttonName="Signin"
-          routeTo='signin'
+          routeTo="signin"
         >
           <p>{error.message}</p>
         </ModalDashboard>
@@ -141,9 +148,7 @@ export default function FreeDashboard() {
               {prompt && (
                 <button
                   onClick={() => handleGenerateButton()}
-                  disabled={
-                    generatedImage.isLoading
-                  }
+                  disabled={generatedImage.isLoading}
                   className={`text-sm px-6 py-1 rounded text-white transition-all duration-300 ease-in-out transform ${
                     generatedImage.isLoading
                       ? "bg-gray-500 cursor-not-allowed"
@@ -204,16 +209,18 @@ export default function FreeDashboard() {
                   className="max-w-full max-h-[80vh] object-contain"
                 />
               </div>
-              {(prompt && !generatedImage.isLoading && generatedImage.image !== "") && (
-                <div className="mt-4 flex justify-between">
-                  <button
-                    onClick={() => handleGenerateButton()}
-                    className="w-full bg-gray-700 hover:bg-primary text-sm px-3 py-1 rounded"
-                  >
-                    Regenerate
-                  </button>
-                </div>
-              )}
+              {prompt &&
+                !generatedImage.isLoading &&
+                generatedImage.image !== "" && (
+                  <div className="mt-4 flex justify-between">
+                    <button
+                      onClick={() => handleGenerateButton()}
+                      className="w-full bg-gray-700 hover:bg-primary text-sm px-3 py-1 rounded"
+                    >
+                      Regenerate
+                    </button>
+                  </div>
+                )}
             </div>
           )}
           {generatedImage.isLoading && (

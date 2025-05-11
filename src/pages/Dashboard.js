@@ -32,6 +32,7 @@ export default function Dashboard() {
 
   // Get the Prompt from the Home Page
   useEffect(() => {
+    console.log(location.state);
     if (location.state) {
       setPrompt(() => location.state.prompt);
     }
