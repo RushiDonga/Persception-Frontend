@@ -13,11 +13,11 @@ export default function NewHero() {
     }
 
     if (!userAuth) {
-      navigate("/freeDashboard", { state: { prompt } });
+      navigate("/freeDashboard", { state: { prompt } })
     } else {
-      navigate("/dashboard", { state: { prompt } });
+      navigate("/dashboard", { state: { prompt } })
     }
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center px-6 py-12">
