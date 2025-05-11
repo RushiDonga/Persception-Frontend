@@ -35,7 +35,7 @@ export default function Dashboard() {
     if (location.state) {
       setPrompt(() => location.state.prompt);
     }
-  }, []);
+  }, [location.state]);
 
   // Handle Dashboard Errors here
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function Dashboard() {
           }
       }
     }
-  }, [error]);
+  }, [error, logout]);
 
   // Generate Image API Call
   const handleGenerateButton = async () => {

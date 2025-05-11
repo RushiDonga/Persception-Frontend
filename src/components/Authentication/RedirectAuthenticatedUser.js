@@ -11,7 +11,7 @@ export default function RedirectAuthenticatedUser({children}) {
         if(userAuth){
             navigate('/dashboard');
         }
-    }, [userAuth]);
+    }, [userAuth, navigate]);
 
     return (
         <>

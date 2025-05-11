@@ -34,7 +34,7 @@ export default function FreeDashboard() {
     if (location.state) {
       setPrompt(() => location.state.prompt);
     }
-  }, []);
+  }, [location.state]);
 
   // Handle Dashboard Errors here
   useEffect(() => {

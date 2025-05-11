@@ -11,7 +11,7 @@ export default function AuthenticateUser({children}) {
         if(userAuth === null){
             navigate('/');
         }
-    }, [userAuth]);
+    }, [userAuth, navigate]);
 
     return (
         <>
