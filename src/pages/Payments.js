@@ -1,6 +1,4 @@
-import React from "react";
 import { useState } from "react";
-import Stripe from 'stripe';
 
 export default function PaymentPage() {
   const [amount, setAmount] = useState(0);
@@ -37,7 +35,7 @@ export default function PaymentPage() {
         {/* Left Section */}
         <div className="md:col-span-2 space-y-6 bg-gray-800 p-6 rounded-2xl shadow-lg">
           {/* Current Balance */}
-          <div className="text-xl font-semibold text-blue-400">
+          <div className="text-xl font-semibold text-indigo-600">
             Your Current Balance
             <div className="text-3xl font-bold text-white">
               0 <span className="text-base font-normal">credits available</span>
@@ -89,9 +87,9 @@ export default function PaymentPage() {
             </button>
             <p className="text-xs text-gray-400 mt-2">
               By completing this payment, you agree to our{" "}
-              <a href="#" className="underline">
+              <p className="underline">
                 Terms of Service
-              </a>
+              </p>
               .
             </p>
           </div>

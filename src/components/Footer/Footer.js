@@ -1,6 +1,3 @@
-import React from "react";
-import logo from "../../images/logo.png";
-
 const Footer = () => {
   return (
     <footer className="bg-gray-950 border-t-2 border-t-slate-500 text-white py-6">
@@ -15,9 +12,14 @@ const Footer = () => {
           <span>
             Made with <span className="animate-pulse text-red-500">❣️</span> by
           </span>
-          <span className="text-primary hover:underline transition">
+          <a
+            href="https://www.linkedin.com/in/rushidonga/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline transition"
+          >
             Rushi Donga
-          </span>
+          </a>
         </div>
       </div>
     </footer>

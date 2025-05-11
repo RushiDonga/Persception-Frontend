@@ -1,5 +1,5 @@
 {
-  "name": "perception",
+  "name": "AI ImageGen",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +9,6 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.9.0",
-    "gh-pages": "^6.3.0",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.508.0",
     "react": "^19.1.0",

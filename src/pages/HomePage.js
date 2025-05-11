@@ -1,6 +1,3 @@
-import Navbar from "../components/Header/Navbar";
-import Hero from "../components/Header/Hero";
-import DemoVideo from "../components/DemoVideo";
 import Footer from "../components/Footer/Footer"
 import PinterestLayout from "../components/PinterestLayout/PintrestLayout";
 import FrequentlyAskedQuestions from "../components/FAQ/FrequentlyAskedQuestions";

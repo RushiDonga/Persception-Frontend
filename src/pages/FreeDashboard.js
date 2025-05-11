@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import LoadingOverlay from "../components/LoadingOverlay";
 import { useLocation } from "react-router-dom";
 import { HashLoader } from "react-spinners";
 import getImageDimensions from "../util/getImageDimensions";
@@ -11,7 +10,6 @@ import ModalDashboard from "../components/ModalDashboard";
 
 export default function FreeDashboard() {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(false);
   const [prompt, setPrompt] = useState("");
   const [error, setError] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -81,7 +79,6 @@ export default function FreeDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white font-sans">
-      <LoadingOverlay isLoading={isLoading} />
 
       {error && (
         <ModalDashboard
