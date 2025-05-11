@@ -7,6 +7,7 @@ import getImageDimensions from "../util/getImageDimensions";
 import getOrCreateDeviceId from "../util/getOrCreateDeviceId";
 import { freeAccessAPI } from "../api/freeAccessAPI";
 import ModalDashboard from "../components/ModalDashboard";
+import { downloadImage } from "../util/downloadImage";
 
 export default function FreeDashboard() {
   const location = useLocation();
@@ -214,10 +215,10 @@ export default function FreeDashboard() {
                 generatedImage.image !== "" && (
                   <div className="mt-4 flex justify-between">
                     <button
-                      onClick={() => handleGenerateButton()}
+                      onClick={() => downloadImage()}
                       className="w-full bg-gray-700 hover:bg-primary text-sm px-3 py-1 rounded"
                     >
-                      Regenerate
+                      Download
                     </button>
                   </div>
                 )}

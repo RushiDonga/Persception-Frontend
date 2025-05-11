@@ -6,6 +6,7 @@ import { textToImageApi } from "../api/textToImage";
 import { HashLoader } from "react-spinners";
 import getImageDimensions from "../util/getImageDimensions";
 import ModalDashboard from "../components/ModalDashboard";
+import { downloadImage } from "../util/downloadImage";
 
 export default function Dashboard() {
   const location = useLocation();
@@ -203,10 +204,10 @@ export default function Dashboard() {
               {generatedImage && (
                 <div className="mt-4 flex justify-between">
                   <button
-                    onClick={() => handleGenerateButton()}
+                    onClick={() => downloadImage()}
                     className="w-full bg-gray-700 hover:bg-primary text-sm px-3 py-1 rounded"
                   >
-                    Regenerate
+                    Download
                   </button>
                 </div>
               )}
