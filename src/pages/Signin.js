@@ -5,7 +5,6 @@ import { FaCheck, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { signIn } from "../api/auth";
 import { googleAuth } from "../api/auth";
 import { useAuth } from "../context/AuthContext";
-import LoadingOverlay from "../components/LoadingOverlay";
 import { useGoogleLogin } from "@react-oauth/google";
 import { MoonLoader } from "react-spinners";
 

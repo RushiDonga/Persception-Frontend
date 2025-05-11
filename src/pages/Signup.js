@@ -2,7 +2,6 @@ import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { googleAuth } from "../api/auth";
 import { useGoogleLogin } from "@react-oauth/google";
-import LoadingOverlay from "../components/LoadingOverlay";
 import { useState } from "react";
 import { handleSignUp } from "../api/auth";
 import { useAuth } from "../context/AuthContext";
