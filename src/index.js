@@ -68,8 +68,11 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {console.log("CLIENT SECRET HERE")}
+    {console.log(process.env.REACT_APP_GOOGLE_CLIENT_ID)};
     <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
       <RouterProvider router={router} />
     </GoogleOAuthProvider>
   </React.StrictMode>
 );
+cd performance
