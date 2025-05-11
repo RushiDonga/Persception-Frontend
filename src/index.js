@@ -75,4 +75,3 @@ root.render(
     </GoogleOAuthProvider>
   </React.StrictMode>
 );
-cd performance
