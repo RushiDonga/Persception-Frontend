@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/AI-ImageGen/static/css/main.4e747d1f.css",
+    "main.js": "/AI-ImageGen/static/js/main.57fad2f7.js",
+    "static/media/homeBackground.png": "/AI-ImageGen/static/media/homeBackground.127c13abbe47c2c4f112.png",
+    "index.html": "/AI-ImageGen/index.html",
+    "main.4e747d1f.css.map": "/AI-ImageGen/static/css/main.4e747d1f.css.map",
+    "main.57fad2f7.js.map": "/AI-ImageGen/static/js/main.57fad2f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e747d1f.css",
+    "static/js/main.57fad2f7.js"
+  ]
+}
