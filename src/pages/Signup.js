@@ -23,8 +23,6 @@ export default function Signup() {
       // Decode the data using Google API
       const googleRes = await googleAuth(responseData.access_token);
 
-      setIsLoading(true);
-
       // Upload data to Database
       const response = await handleSignUp(googleRes, "google", setError);
 
@@ -32,6 +30,8 @@ export default function Signup() {
     if (response) {
       login(response);
       navigate('/dashboard')
+    }else{
+      
     }
     setIsLoading(false);
     },

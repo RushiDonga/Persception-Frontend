@@ -54,9 +54,7 @@ export const handleSignUp = async (data, createdUsing, setError) => {
         setError((prev) => null);
         return res.data;
     }).catch(error => {
-        handleError(error);
-    }).catch(error => {
-        setError((prev) => error.message);
+        handleErrorV2(error, setError);
     })
 }
 
