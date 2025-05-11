@@ -7,6 +7,7 @@ import { useState } from "react";
 import { handleSignUp } from "../api/auth";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { MoonLoader } from "react-spinners";
 
 export default function Signup() {
   const [error, setError] = useState(null);
@@ -42,6 +43,13 @@ export default function Signup() {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
+      
+      {isLoading && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center">
+          <MoonLoader color="#6d29d3" size={80} />
+        </div>
+      )}
+
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -81,7 +89,5 @@ export default function Signup() {
           </Link>
         </p>
       </div>
-    
-      <LoadingOverlay isLoading={isLoading} />
     </div>  );
 }

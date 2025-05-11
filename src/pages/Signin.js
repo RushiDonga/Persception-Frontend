@@ -7,6 +7,7 @@ import { googleAuth } from "../api/auth";
 import { useAuth } from "../context/AuthContext";
 import LoadingOverlay from "../components/LoadingOverlay";
 import { useGoogleLogin } from "@react-oauth/google";
+import { MoonLoader } from "react-spinners";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
@@ -61,7 +62,11 @@ export default function Signin() {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
-      <LoadingOverlay isLoading={isLoading} />
+      {isLoading && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center">
+          <MoonLoader color="#6d29d3" size={80} />
+        </div>
+      )}
 
       {/* Background Image */}
       <div
