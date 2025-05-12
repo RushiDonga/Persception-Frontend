@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import NotFoundPage from "./pages/NotFoundPage";
 import Signin from "./pages/Signin";
 import SignUp from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
@@ -13,12 +12,13 @@ import PaymentPage from "./pages/Payments";
 import FreeDashboard from "./pages/FreeDashboard";
 import RedirectAuthenticatedUser from "./components/Authentication/RedirectAuthenticatedUser";
 import AuthenticateUser from "./components/Authentication/AuthenticateUser";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <NotFoundPage />,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
-    errorElement: <NotFoundPage />,
+    errorElement: <NotFound />,
   },
 ]);
 
