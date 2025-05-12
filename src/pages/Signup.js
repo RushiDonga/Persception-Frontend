@@ -62,10 +62,10 @@ export default function Signup() {
       <div className="relative z-10 w-full max-w-md space-y-8 p-8 rounded-2xl shadow-xl border border-[#2a2a2a] bg-[#1a1a1a]/90 backdrop-blur-md">
         <div className="text-center space-y-2">
           <h1 className="text-xl md:text-2xl font-bold text-primary font-orbitron">
-          AI ImageGen
+          Persception
         </h1>
           <h1 className="text-3xl font-bold text-white">Welcome Back</h1>
-          <p className="text-sm text-gray-400">Sign in to continue to AI ImageGen</p>
+          <p className="text-sm text-gray-400">Sign in to continue to Persception</p>
         </div>
     
         <button

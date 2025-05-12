@@ -13,7 +13,7 @@ export default function NewNavBar() {
   <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
     {/* Logo / Title */}
     <h1 className="text-xl md:text-2xl font-bold text-purple-500 font-orbitron">
-      AI ImageGen
+      Persception
     </h1>
 
     {/* Button container aligned right */}

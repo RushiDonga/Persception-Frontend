@@ -92,7 +92,7 @@ export default function Dashboard() {
       {/* Top Navbar */}
       <div className="flex justify-between items-center px-6 py-4 bg-gray-800 border-b border-gray-700">
         <h1 className="text-xl md:text-2xl font-bold text-purple-500 font-orbitron">
-          AI ImageGen
+          Persception
         </h1>{" "}
         <div className="flex gap-6 items-center">
           {userAuth && (

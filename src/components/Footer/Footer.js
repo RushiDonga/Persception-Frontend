@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         {/* Logo */}
         <h1 className="text-xl md:text-2xl font-bold text-purple-500 font-orbitron">
-          AI ImageGen
+          Persception
         </h1>
 
         {/* Right Note */}
