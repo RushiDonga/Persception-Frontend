@@ -215,7 +215,7 @@ export default function FreeDashboard() {
                 generatedImage.image !== "" && (
                   <div className="mt-4 flex justify-between">
                     <button
-                      onClick={() => downloadImage()}
+                      onClick={() => downloadImage(generatedImage.image)}
                       className="w-full bg-gray-700 hover:bg-primary text-sm px-3 py-1 rounded"
                     >
                       Download

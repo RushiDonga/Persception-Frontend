@@ -204,7 +204,7 @@ export default function Dashboard() {
               {generatedImage && (
                 <div className="mt-4 flex justify-between">
                   <button
-                    onClick={() => downloadImage()}
+                    onClick={() => downloadImage(generatedImage)}
                     className="w-full bg-gray-700 hover:bg-primary text-sm px-3 py-1 rounded"
                   >
                     Download
